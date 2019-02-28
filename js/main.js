@@ -1,5 +1,18 @@
 'use strict';
 
+$(document).ready(function ($) {
+
+    var minh = $(window).height()/2;
+
+    $('.description_text').readmore({
+        speed: 1000,
+        collapsedHeight: minh,
+        moreLink: '<a href="#" class="row_text"></a>',
+        lessLink: '<a href="#" class="row_text row_up"></a>'
+    });
+
+});
+
 window.onload = function () {
 
     // btn group
@@ -25,10 +38,6 @@ window.onload = function () {
         document.getElementById("main").classList.add("main-hide");
     }
 
-    function showAllInfo() {
-        document.getElementById("allInfo").classList.toggle("hide");
-        document.getElementById("showAllInfo").classList.toggle("showAllInfo");
-    }
 
     function getId(y) {
         return document.getElementById(y);
@@ -49,22 +58,24 @@ window.onload = function () {
     getId("request2").onclick = function () {
         requestPopActive();
     };
-    getId("showAllInfo").onclick = function () {
-        showAllInfo();
-    };
 
     // scroll
     window.onscroll = function () {
 
         var y = document.getElementById('scrollRegion').getBoundingClientRect().top - 84;
+
+        var f = document.getElementById("scrollRegionFooter").getBoundingClientRect().top - 84;
+
         var h = document.getElementsByTagName("header")[0];
-        if (y < 0) {
+        if (y < 0 && f > 0 ) {
             h.classList.add("header_white");
+        } else if (f < 0) {
+            h.classList.remove("header_white");
         } else {
             h.classList.remove("header_white");
         }
     };
 
-};
 
+};
 

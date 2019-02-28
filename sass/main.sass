@@ -38,6 +38,8 @@ $coloBlack: #0D0D0D
 $colorBg: #0D0D0D
 $colorLiteGray: #ECECEB
 
+$colorTextGray: rgba(20, 20, 20, .5)
+
 $colorDarkGray:  #171717
 
 *
@@ -285,7 +287,6 @@ header.header_white
       width: 39px
     span:nth-child(2)
       transition: width .15s linear
-      //width: 27px
 #btn2
   span
     background: $coloBlack
@@ -318,7 +319,6 @@ header.header_white
   font-size: 59px
 
 
-//TODO MAIN ~`~`~`~`~`~
 div#main
   //margin-top: 84px
   //width: 100%
@@ -765,24 +765,21 @@ section.front_posts
   height: 100vh
   display: flex
   align-items: flex-end
+  justify-content: flex-end
   overflow: hidden
   color: $coloBlack
   background: $colorLiteGray
   .front_posts_wrapper
-    border: 1px solid red
     width: 100%
-    height: 100%
-
+    height: calc(100% - 84px)
+    max-width: 66vw
+    margin-right: 10vw
     .title_row
-      border: 1px dotted grey
       display: flex
       align-items: center
       justify-content: space-between
-      h3
-        border: 1px solid red
+      height: 30%
       .more
-        border: 1px solid blue
-
         font-style: normal
         font-weight: bold
         line-height: 20px
@@ -791,56 +788,104 @@ section.front_posts
         color: $coloBlack
 
     .content_row
-      border: 1px dotted grey
       display: flex
-      align-items: center
+      align-items: flex-start
       justify-content: space-between
-
+      height: 70%
+      position: relative
       .post_box
-        border: 1px solid blue
-
         width: 100%
-        max-width: 35%
+        max-width: 45%
+        height: 70%
+        .post_box_link
+          display: flex
+          flex-direction: column
+          align-items: flex-start
+          //justify-content: space-between
+          width: 100%
+          height: 100%
+          text-decoration: none
+          color: $coloBlack
+          .post_img
+            width: 100%
+            height: auto
+          .post_data
+            font-style: normal
+            font-weight: normal
+            line-height: 20px
+            font-size: 12px
+            letter-spacing: 0.04em
+            margin-top: 24px
+          .post_teaser_text
+            font-style: normal
+            font-weight: 500
+            line-height: 26px
+            font-size: 18px
+            margin-top: 11px
+
 
 section.front_description
   width: 100%
   min-height: 100vh
   display: flex
   align-items: center
+  justify-content: flex-end
   overflow: hidden
   color: $coloBlack
   background: $coloWhite
   .front_description_wrapper
-    border: 1px dotted grey
-
+    width: 100%
+    max-width: 66vw
+    margin-right: 10vw
     .title
-      border: 1px dotted grey
+      font-weight: 600
+      line-height: 25px
+      font-size: 16px
+      letter-spacing: 0.03em
+      margin-bottom: 6%
     .description_content
-      border: 1px dotted blue
+      .description_text
+        display: inline-block
+        position: relative
+        columns: 2
+        p
+          font-style: normal
+          font-weight: normal
+          line-height: 22px
+          font-size: 14px
+          letter-spacing: 0.03em
+          color: $colorTextGray
+          margin: 0 0 16px 0
 
-      #teaserInfo
-        border: 1px solid royalblue
+      .row_text
+        margin: 0 auto
+        text-decoration: none
+        width: 50px
+        height: 50px
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 10%
+        &:after
+          content: ''
+          display: block
+          width: 10px
+          height: 10px
+          border-bottom: 2px solid $coloBlack
+          border-right: 2px solid $coloBlack
+          transform: rotate(45deg)
+      .row_text.row_up
+        &:after
+          transform: rotate(-135deg)
 
-      #allInfo
-        border: 1px solid yellow
 
-      #showAllInfo
-        border: 1px solid green
-        padding: 0
-        margin: 0
-
-      #showAllInfo.showAllInfo
-        border: 1px solid red
+section.front_footer
+  .front_footer_request
+    border: 1px solid red
+    height: 70vh
 
 
-
-
-
-
-
-
-
-//TODO menu_pop start (вынести отдельным файлом)
 .menu_pop
   width: 0
   position: fixed
@@ -890,10 +935,8 @@ section.front_description
             line-height: 51px
             font-size: 35px
             color: $coloWhite
-//TODO menu_pop end
 
 
-//TODO request_pop start (вынести отдельным файлом)
 .request_pop
   background: $coloWhite
   width: 100vw
@@ -915,71 +958,74 @@ section.front_description
   .request_header_fix
     position: fixed
     width: 100%
-  .footer-box
+
+
+.footer-box
+  width: 100%
+  height: 580px
+  color: $coloWhite
+  background: $coloBlack
+  .footer-wrapper
     width: 100%
-    height: 580px
-    color: $coloWhite
-    background: $coloBlack
-    .footer-wrapper
-      width: 100%
-      height: calc( 100% - 100px )
-      //max-width: 750px
-      //max-width: 70vw
-      margin: 0 auto
-      display: flex
-      justify-content: space-around
-      padding-top: 100px
-      .footer-list-block
-        min-width: 300px
-        ul
-          li
-            margin-bottom: 10px
-            a
-              font-style: normal
-              font-weight: normal
-              line-height: 34px
-              font-size: 20px
-              letter-spacing: 0.03em
-              color: $coloWhite
-              text-decoration: none
-
-      .footer-address-block
-        width: 300px
-        display: flex
-        flex-direction: column
-        justify-content: space-between
-        .address_content
-          font-style: normal
-          font-weight: 500
-          line-height: 19px
-          font-size: 12px
-          letter-spacing: 0.03em
-          color: $coloWhite
-          p
-            a
-              width: 100%
-              display: block
-              color: $coloWhite
-          .mail
+    height: calc( 100% - 100px )
+    //max-width: 750px
+    //max-width: 70vw
+    margin: 0 auto
+    display: flex
+    justify-content: space-around
+    padding-top: 100px
+    .footer-list-block
+      min-width: 300px
+      ul
+        li
+          margin-bottom: 10px
+          a
+            font-style: normal
+            font-weight: normal
+            line-height: 34px
+            font-size: 20px
+            letter-spacing: 0.03em
             color: $coloWhite
+            text-decoration: none
+
+    .footer-address-block
+      width: 300px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      .address_content
+        font-style: normal
+        font-weight: 500
+        line-height: 19px
+        font-size: 12px
+        letter-spacing: 0.03em
+        color: $coloWhite
+        p
+          a
+            width: 100%
             display: block
-            margin: 40px 0
-          .phone-block
-            a
-              display: block
-              text-decoration: none
-              color: $coloWhite
-              margin: 4px 0
-
-
-        .copi
-          margin-bottom: 53px
-          font-style: normal
-          font-weight: 500
-          line-height: 20px
-          font-size: 12px
-          letter-spacing: 0.03em
+            color: $coloWhite
+        .mail
           color: $coloWhite
+          display: block
+          margin: 40px 0
+        .phone-block
+          a
+            display: block
+            text-decoration: none
+            color: $coloWhite
+            margin: 4px 0
+
+
+      .copi
+        margin-bottom: 53px
+        font-style: normal
+        font-weight: 500
+        line-height: 20px
+        font-size: 12px
+        letter-spacing: 0.03em
+        color: $coloWhite
+
 
 .request_pop_active
   transition: height .15s linear
@@ -987,8 +1033,6 @@ section.front_description
   z-index: 999
   #requestHide
     cursor: inherit
-
-//TODO request_pop end
 
 
 .hide
