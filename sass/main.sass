@@ -1,0 +1,1008 @@
+// reset style
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+
+// main style
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic')
+$fontMontserrat: 'Montserrat', sans-serif
+$coloWhite: #FFFFFF
+$coloBlack: #0D0D0D
+//$colorBg: #141414
+$colorBg: #0D0D0D
+$colorLiteGray: #ECECEB
+
+$colorDarkGray:  #171717
+
+*
+  outline: 0 !important
+button
+  cursor: pointer
+
+html
+  overflow-y: scroll
+  overflow-x: auto
+
+
+body
+  width: 100%
+  height: 100vh
+  font-family: $fontMontserrat
+  position: relative
+  display: flex
+  background: $coloBlack
+  color: $coloWhite
+
+
+header,
+.menu_pop,
+.request_pop
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 84px
+  z-index: 99
+  .header-wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin: 20px 0 0 0
+    position: relative
+    .header-wrapper_left
+      display: flex
+      align-items: center
+      .main-logo
+        margin-left: 64px
+        margin-right: 107px
+      .btn-box
+        height: 52px
+
+    .header-wrapper_right
+      display: flex
+      align-items: center
+      margin-top: 4px
+      .tel
+        a
+          font-style: normal
+          font-weight: 600
+          line-height: 18px
+          font-size: 12px
+          letter-spacing: 0.1em
+          color: $coloWhite
+          text-decoration: none
+      .request
+        margin-left: 137px
+        margin-right: 80px
+        #request,
+        #request2,
+        #requestHide
+          background: transparent
+          color: $coloWhite
+          border: none
+          padding: 0
+          margin: 0
+          font-style: normal
+          font-weight: bold
+          line-height: 20px
+          font-size: 14px
+          display: flex
+          align-items: center
+          text-decoration:
+          span:first-child
+            text-decoration: underline
+          span:last-child
+            color: $coloWhite
+            margin-left: 22px
+            font-size: 30px
+            font-weight: 300
+    .left_wrapper
+      position: absolute
+      left: 64px
+      top: 64px
+      width: 26px
+      height: calc(98vh - 84px)
+      display: flex
+      flex-direction: column
+      justify-content: space-evenly
+      .leng_wrapper
+        .leng-link
+          li
+            display: flex
+            align-items: center
+            justify-content: center
+            a
+              text-decoration: none
+              font-style: normal
+              font-weight: 600
+              line-height: 16px
+              font-size: 10px
+              letter-spacing: 0.1em
+              text-transform: uppercase
+              color: $coloWhite
+
+      .social_wrapper
+        .social-link
+          li
+            height: 70px
+            position: relative
+            a
+              display: flex
+              align-items: center
+              justify-content: center
+              width: 100%
+              height: 100%
+              text-decoration: none
+              font-style: normal
+              font-weight: 600
+              line-height: 16px
+              font-size: 10px
+              letter-spacing: 0.1em
+              text-transform: uppercase
+              color: $coloWhite
+              span
+                transform: rotate(-90deg)
+                display: flex
+                align-items: flex-start
+                line-height: 0
+                height: 10px
+              &:after
+                content: ''
+                display: block
+                width: 0.5px
+                height: 0
+                background: $coloWhite
+                position: absolute
+                top: 6%
+                left: 14px
+                transform: rotate(-180deg)
+                transition: height .15s linear
+              &:hover
+                &:after
+                  height: 90%
+
+
+            &:nth-child(2)
+              margin: 30px 0
+
+.request_pop
+  .header-wrapper
+    .header-wrapper_right
+      .tel
+        a
+          color: $coloBlack
+      .request
+        #requestHide
+          color: $coloBlack
+          span:last-child
+            color: $coloBlack
+    .left_wrapper
+      .leng_wrapper
+        .leng-link
+          li
+            a
+              color: $coloBlack
+      .social_wrapper
+        .social-link
+          li
+            a
+              color: $coloBlack
+              &:after
+                background: $coloBlack
+
+
+header.header_white
+  background: $coloWhite
+  .header-wrapper
+    .header-wrapper_left
+      .main-logo
+        a
+          svg
+            path
+              fill: $coloBlack
+
+
+      .btn-box
+        #btn
+          span
+            background: $coloBlack
+
+    .header-wrapper_right
+      .tel
+        a
+          color: $coloBlack
+      #request
+        color: $coloBlack
+        span:last-child
+          color: $coloBlack
+    .left_wrapper
+      .leng_wrapper
+        .leng-link
+          li
+            a
+              color: $coloBlack
+      .social_wrapper
+        .social-link
+          li
+            a
+              color: $coloBlack
+              &:after
+                background: $coloBlack
+
+
+#btn,
+#btn2
+  background: transparent
+  border: none
+  min-width: 39px
+  padding: 0
+  margin: 0
+  margin-top: 6px
+  span
+    background: $coloWhite
+  span:first-child,
+  span:last-child
+    transition: width .15s linear
+    display: block
+    width: 27px
+    height: 2px
+  span:nth-child(2)
+    transition: width .15s linear
+    display: block
+    width: 39px
+    height: 2px
+    margin: 4px 0
+  &:hover
+    span:first-child,
+    span:last-child
+      transition: width .15s linear
+      width: 39px
+    span:nth-child(2)
+      transition: width .15s linear
+      //width: 27px
+#btn2
+  span
+    background: $coloBlack
+#btnHide
+  display: flex
+  border: none
+  align-items: center
+  justify-content: center
+  background: transparent
+  padding: 0
+  width: 30px
+  height: 30px
+  span
+    width: 30px
+    height: 2px
+    background: $coloWhite
+
+  span:first-child
+    position: absolute
+    transform: rotate(45deg)
+  span:last-child
+    position: absolute
+    transform: rotate(-45deg)
+
+
+.h3
+  font-style: normal
+  font-weight: 600
+  line-height: 86px
+  font-size: 59px
+
+
+//TODO MAIN ~`~`~`~`~`~
+div#main
+  //margin-top: 84px
+  //width: 100%
+  width: 100vw
+  .main-wrapper
+    border: 1px dotted grey
+    width: 100%
+    max-width: 1000px
+    margin: 0 auto
+
+div#main.main-hide
+  display: none!important
+
+
+section.front_01
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  height: calc(100vh + 58px)
+  background-image: url("../img/bg.png")
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  position: relative
+  .description
+    width: 100%
+    height: 90%
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    p
+      max-width: 64vw
+      font-style: normal
+      font-weight: 500
+      line-height: 51px
+      font-size: 35px
+      color: $coloWhite
+      margin-right: 11vw
+
+  &:after
+    content: ''
+    display: block
+    width: 1px
+    height: 100px
+    background: $coloWhite
+    position: absolute
+    bottom: 58px
+    left: 50%
+  &:before
+    content: ''
+    display: block
+    width: 3px
+    height: 6px
+    border-top: 4px solid $coloBlack
+    border-bottom: 4px solid $coloBlack
+    background: transparent
+    position: absolute
+    z-index: 9
+    bottom: 152px
+    left: calc(50% - 1px)
+    animation-name: dot
+    animation: dot 2s infinite ease-in-out
+    animation-direction: alternate
+
+
+section.front_02
+  width: 100%
+  height: 100vh
+  .description
+    .title
+      width: 100%
+      height: 20vh
+      display: flex
+      align-items: center
+      h3
+        font-style: normal
+        font-weight: 500
+        line-height: 51px
+        font-size: 35px
+        color: $coloWhite
+        margin-left: 25vw
+
+    .number-wrapper
+      display: flex
+      height: 80vh
+      justify-content: flex-end
+      align-items: center
+      .number_box
+        max-width: 260px
+        display: flex
+        flex-direction: column
+        span:first-child
+          font-weight: 500
+          line-height: 0.5
+          font-size: 35px
+          text-align: right
+          color: #FFFFFF
+        span:nth-child(2)
+          font-weight: 600
+          font-size: 136px
+          text-transform: uppercase
+          color: $coloWhite
+          line-height: 0.7
+        span:last-child
+          font-weight: 600
+          font-size: 10px
+          letter-spacing: 0.1em
+          text-transform: uppercase
+          color: $coloWhite
+          height: 30px
+          display: flex
+          align-items: flex-end
+          justify-content: flex-end
+
+      .number-row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        width: 70vw
+        margin-right: 5vw
+        height: max-content
+        .number_flex
+          display: flex
+          flex: 49%
+          margin: 0 0 6vh 0
+        .number_flex:first-child,
+        .number_flex:nth-child(2)
+          display: flex
+          justify-content: flex-end
+
+
+section.front_service
+  width: 100%
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  overflow: hidden
+  .front_service_wrapper
+    width: 100%
+    max-width: 80vw
+    margin-right: 5vw
+    .front_service_link
+      width: 100%
+      height: 100%
+      min-height: 50vh
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $coloWhite
+      text-decoration: none
+      background: $colorDarkGray
+      position: relative
+      .description_servise
+        display: block
+        width: 100%
+        height: 100%
+        z-index: 99
+        span
+          font-style: normal
+          font-weight: 600
+          line-height: 16px
+          font-size: 10px
+          letter-spacing: 0.1em
+          text-transform: uppercase
+          color: $coloWhite
+          margin: 4% 0 0 8%
+          display: block
+        h3
+          color: $coloWhite
+          margin: 4% 0 0 8%
+          width: max-content
+          max-width: 90%
+          position: relative
+          &:after
+            content: ' '
+            display: block
+            width: 0
+            height: 2px
+            background: $coloWhite
+            transition: width .15s linear
+            position: absolute
+            bottom: 14px
+
+        p
+          max-width: 40%
+          margin: 2% 0 8% 8%
+          font-style: normal
+          font-weight: normal
+          line-height: 34px
+          font-size: 20px
+          letter-spacing: 0.03em
+          color: $coloWhite
+        &:after
+          content: ''
+          display: block
+          width: 70%
+          height: 120%
+          position: absolute
+          top: -10%
+          left: 40%
+          transition: all .15s linear
+
+      .background_servise
+        width: 60%
+        height: 100%
+        position: absolute
+        top: 0
+        right: 0
+        &:before
+          content: ''
+          width: 100%
+          height: 100%
+          position: absolute
+          background: url("../img/dbgb.png")
+          opacity: .85
+
+      .front_service_button
+        position: absolute
+        z-index: 999
+        right: 15%
+        bottom: 10%
+        display: flex
+        align-items: center
+        .read
+          font-style: normal
+          font-weight: 600
+          line-height: 16px
+          font-size: 10px
+          letter-spacing: 0.1em
+          text-transform: uppercase
+          color: $coloWhite
+          &:after
+            content: ' '
+            display: block
+            width: 0
+            height: 1px
+            background: $coloWhite
+            position: absolute
+            left: 86px
+            bottom: 8px
+            transition: width .15s linear
+
+        .line
+          width: 7px
+          height: 7px
+          border-top: 1px solid $coloWhite
+          border-right: 1px solid $coloWhite
+          transform: rotate(45deg)
+          position: absolute
+          right: -36px
+          transition: all .15s linear
+
+    .service_web
+      .description_servise:after
+        background: url("../img/W.png")
+        background-repeat: no-repeat
+        background-position: left center
+        background-size: contain
+        transition: all .15s linear
+      .background_servise
+        background: url("../img/w.png")
+        background-size: cover
+        background-position: center center
+        background-repeat: no-repeat
+        transition: all .15s linear
+
+    .service_seo
+      .description_servise:after
+        background: url("../img/S.png")
+        background-repeat: no-repeat
+        background-position: left center
+        background-size: contain
+        transition: all .15s linear
+      .background_servise
+        background: url("../img/seo.png")
+        background-size: cover
+        background-position: center center
+        background-repeat: no-repeat
+        transition: all .15s linear
+
+    .service_ppc
+      .description_servise:after
+        background: url("../img/P.png")
+        background-repeat: no-repeat
+        background-position: left center
+        background-size: contain
+        transition: all .15s linear
+      .background_servise
+        background: url("../img/ppc.png")
+        background-size: cover
+        background-position: center center
+        background-repeat: no-repeat
+        transition: all .15s linear
+
+    .service_smm
+      .description_servise:after
+        background: url("../img/S.png")
+        background-repeat: no-repeat
+        background-position: left center
+        background-size: contain
+        transition: all .15s linear
+      .background_servise
+        background: url("../img/smm.png")
+        background-size: cover
+        background-position: center center
+        background-repeat: no-repeat
+        transition: all .15s linear
+
+    .service_complex
+      .description_servise:after
+        background: url("../img/C.png")
+        background-repeat: no-repeat
+        background-position: left center
+        background-size: contain
+        transition: all .15s linear
+      .background_servise
+        background: url("../img/complex.png")
+        background-size: cover
+        background-position: center center
+        background-repeat: no-repeat
+        transition: all .15s linear
+
+    .front_service_link:hover
+      .description_servise
+        h3:after
+          transition: width .15s linear
+          width: 100%
+        &:after
+          width: 72%
+          height: 122%
+          background-position-x: 10px
+          transition: all .15s linear
+
+      .background_servise
+        background-position: top center
+        transition: all .15s linear
+        width: 61%
+      .front_service_button
+        .line
+          transition: all .15s linear
+          right: -76px
+
+        .read
+          &:after
+            transition: width .15s linear
+            width: 48px
+
+
+.last_service
+  position: relative
+  &:after
+    content: ''
+    display: block
+    width: 1px
+    height: 100px
+    background: $coloWhite
+    position: absolute
+    bottom: 0px
+    left: 50%
+  &:before
+    content: ''
+    display: block
+    width: 3px
+    height: 6px
+    border-top: 4px solid $coloBlack
+    border-bottom: 4px solid $coloBlack
+    background: transparent
+    position: absolute
+    z-index: 9
+    bottom: 148px
+    left: calc(50% - 1px)
+    animation-name: dot2
+    animation: dot2 2s infinite ease-in-out
+    animation-direction: alternate
+
+
+section.front_clients
+  width: 100%
+  height: 100vh
+  display: flex
+  align-items: flex-end
+  justify-content: flex-end
+  overflow: hidden
+  color: $coloBlack
+  background: $colorLiteGray
+  .front_clients_wrapper
+    width: 100%
+    max-width: 66vw
+    margin-right: 10vw
+    height: calc(100% - 84px)
+    color: $coloBlack
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    .title
+      width: 100%
+      height: max-content
+      display: flex
+      align-items: center
+    .icon_wrapper
+      width: 100%
+      min-height: 30%
+      height: max-content
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-between
+      .icon_box
+        display: flex
+        align-items: center
+        width: 33%
+        justify-content: flex-end
+        img
+          transition: all .15s linear
+          width: 50%
+        &:nth-child(4),
+        &:nth-child(5),
+        &:last-child
+          justify-content: flex-start
+
+
+section.front_form
+  width: 100%
+  height: 100vh
+  display: flex
+  align-items: flex-end
+  overflow: hidden
+  color: $coloBlack
+  background: $coloWhite
+  .form-box
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+section.front_posts
+  width: 100%
+  height: 100vh
+  display: flex
+  align-items: flex-end
+  overflow: hidden
+  color: $coloBlack
+  background: $colorLiteGray
+  .front_posts_wrapper
+    border: 1px solid red
+    width: 100%
+    height: 100%
+
+    .title_row
+      border: 1px dotted grey
+      display: flex
+      align-items: center
+      justify-content: space-between
+      h3
+        border: 1px solid red
+      .more
+        border: 1px solid blue
+
+        font-style: normal
+        font-weight: bold
+        line-height: 20px
+        font-size: 14px
+        text-decoration-line: underline
+        color: $coloBlack
+
+    .content_row
+      border: 1px dotted grey
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      .post_box
+        border: 1px solid blue
+
+        width: 100%
+        max-width: 35%
+
+section.front_description
+  width: 100%
+  min-height: 100vh
+  display: flex
+  align-items: center
+  overflow: hidden
+  color: $coloBlack
+  background: $coloWhite
+  .front_description_wrapper
+    border: 1px dotted grey
+
+    .title
+      border: 1px dotted grey
+    .description_content
+      border: 1px dotted blue
+
+      #teaserInfo
+        border: 1px solid royalblue
+
+      #allInfo
+        border: 1px solid yellow
+
+      #showAllInfo
+        border: 1px solid green
+        padding: 0
+        margin: 0
+
+      #showAllInfo.showAllInfo
+        border: 1px solid red
+
+
+
+
+
+
+
+
+
+//TODO menu_pop start (вынести отдельным файлом)
+.menu_pop
+  width: 0
+  position: fixed
+  overflow: hidden
+
+.menu_pop_active
+  transition: width .15s linear
+  width: 100vw
+  background: $colorBg
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  overflow: hidden
+  .header-wrapper
+    .menu_pop_bg_logo
+      width: 100%
+      position: absolute
+      top: calc( 50vh - 170px )
+      svg
+        width: 100%
+        height: auto
+        opacity: .9
+
+  .menu_pop_wrapper
+    width: 100%
+    height: 75vh
+    max-width: 781px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    .menu_box
+      ul
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        max-height: 400px
+        li
+          max-width:  504px
+          height: 52px
+          margin: 0 0 15px 0
+          a
+            text-decoration: none
+            font-style: normal
+            font-weight: 500
+            line-height: 51px
+            font-size: 35px
+            color: $coloWhite
+//TODO menu_pop end
+
+
+//TODO request_pop start (вынести отдельным файлом)
+.request_pop
+  background: $coloWhite
+  width: 100vw
+  height: 0
+  position: fixed
+  top: 0
+  left: 0
+  overflow-x: hidden
+  overflow-y: scroll
+  transition: height .15s linear
+  .form-box
+    width: 100%
+    margin-top: 84px
+    min-height: calc( 100vh - 84px )
+    color: $coloBlack
+    display: flex
+    align-items: center
+    justify-content: center
+  .request_header_fix
+    position: fixed
+    width: 100%
+  .footer-box
+    width: 100%
+    height: 580px
+    color: $coloWhite
+    background: $coloBlack
+    .footer-wrapper
+      width: 100%
+      height: calc( 100% - 100px )
+      //max-width: 750px
+      //max-width: 70vw
+      margin: 0 auto
+      display: flex
+      justify-content: space-around
+      padding-top: 100px
+      .footer-list-block
+        min-width: 300px
+        ul
+          li
+            margin-bottom: 10px
+            a
+              font-style: normal
+              font-weight: normal
+              line-height: 34px
+              font-size: 20px
+              letter-spacing: 0.03em
+              color: $coloWhite
+              text-decoration: none
+
+      .footer-address-block
+        width: 300px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .address_content
+          font-style: normal
+          font-weight: 500
+          line-height: 19px
+          font-size: 12px
+          letter-spacing: 0.03em
+          color: $coloWhite
+          p
+            a
+              width: 100%
+              display: block
+              color: $coloWhite
+          .mail
+            color: $coloWhite
+            display: block
+            margin: 40px 0
+          .phone-block
+            a
+              display: block
+              text-decoration: none
+              color: $coloWhite
+              margin: 4px 0
+
+
+        .copi
+          margin-bottom: 53px
+          font-style: normal
+          font-weight: 500
+          line-height: 20px
+          font-size: 12px
+          letter-spacing: 0.03em
+          color: $coloWhite
+
+.request_pop_active
+  transition: height .15s linear
+  height: 100%
+  z-index: 999
+  #requestHide
+    cursor: inherit
+
+//TODO request_pop end
+
+
+.hide
+  display: none
+
+
+@keyframes dot
+  0%
+    bottom: 148px
+  100%
+    bottom: 58px
+
+@keyframes dot2
+  0%
+    bottom: 140px
+  100%
+    bottom: -2px
