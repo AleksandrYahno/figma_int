@@ -34,9 +34,18 @@ table
 $fontMontserrat: 'Montserrat', sans-serif
 $coloWhite: #FFFFFF
 $coloBlack: #0D0D0D
-//$colorBg: #141414
+$colorDifGray: #141414
 $colorBg: #0D0D0D
 $colorLiteGray: #ECECEB
+
+$colorBgLiteGray: #F3F3F1
+
+$colorRed: #EB5656
+$colorYellow: #EBC156
+$colorGreen: #56EBAC
+$colorBlue: #56C7EB
+$colorPurple: #C87DF6
+
 
 $colorTextGray: rgba(20, 20, 20, .5)
 
@@ -312,11 +321,27 @@ header.header_white
     transform: rotate(-45deg)
 
 
+.h1
+  font-style: normal
+  font-weight: bold
+  line-height: normal
+  font-size: 78px
+
+
 .h3
   font-style: normal
   font-weight: 600
   line-height: 86px
   font-size: 59px
+
+.bread_crumbs
+  font-style: normal
+  font-weight: 600
+  line-height: 16px
+  font-size: 10px
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  color: $colorDifGray
 
 
 div#main
@@ -882,8 +907,64 @@ section.front_description
 
 section.front_footer
   .front_footer_request
-    border: 1px solid red
     height: 70vh
+    #frontFooterRequest
+      display: flex
+      align-items: center
+      justify-content: space-evenly
+      width: 100%
+      height: 100%
+      background: url("../img/svg/image.svg")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+      text-decoration: none
+      span
+        font-style: normal
+        font-weight: 600
+        line-height: 86px
+        font-size: 59px
+        color: $coloWhite
+
+      .link_title
+        max-width: 500px
+        span
+          position: relative
+          display: flex
+          width: max-content
+          &:after
+            content: ''
+            display: block
+            width: 0px
+            height: 1px
+            background: $coloWhite
+            transition: width .15s linear
+            position: absolute
+            bottom: 14px
+
+      .link_icon
+        display: flex
+        align-items: center
+        justify-content: center
+        min-width: 70px
+        span
+          transition: all .15s linear
+          line-height: 1
+          font-weight: 200
+          font-size: 60px
+
+      &:hover
+        .link_title
+          span
+            &:after
+              width: 100%
+              transition: width .15s linear
+        .link_icon
+          span
+            transition: all .15s linear
+            transform: rotate(90deg)
+            font-size: 120px
+            font-weight: 100
 
 
 .menu_pop
@@ -1050,3 +1131,154 @@ section.front_footer
     bottom: 140px
   100%
     bottom: -2px
+
+
+//TODO template_service
+body.template_service
+  background: $colorBgLiteGray
+  color: $coloBlack
+  height: auto
+  overflow: hidden
+  header
+    background: $colorBgLiteGray
+    .header-wrapper
+      .header-wrapper_left
+        .main-logo
+          a
+            svg
+              path
+                fill: $coloBlack
+
+        .btn-box
+          #btn
+            span
+              background: $coloBlack
+
+      .header-wrapper_right
+        .tel
+          a
+            color: $coloBlack
+        .request
+          #request
+            color: $coloBlack
+            span:last-child
+              color: $coloBlack
+
+      .left_wrapper
+        .leng_wrapper
+          .leng-link
+            li
+              a
+                color: $coloBlack
+
+        .social_wrapper
+          .social-link
+            li
+              a
+                color: $coloBlack
+                &:after
+                  background: $coloBlack
+
+
+  #main
+    margin-top: 84px
+    .template_service_wrapper
+      width: 100%
+      max-width: 62vw
+      margin-left: 22vw
+      margin-right: 16vw
+
+    .template_service_section_hed
+      width: 100%
+      height: calc(100vh - 84px - 42px)
+      .template_service_section_hed_wrapper
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        .bread_crumbs
+          height: 20%
+          display: flex
+          align-items: center
+
+        .h1
+          height: 40%
+          display: flex
+
+        .service_section_hed_slogan
+          height: 40%
+          overflow: hidden
+          p
+            font-style: normal
+            font-weight: normal
+            line-height: 34px
+            font-size: 20px
+            letter-spacing: 0.03em
+
+    .template_service_section_after_hed
+      width: 100%
+      height: 50vh
+
+    .template_service_section_hed_description
+      width: 100%
+      height: 50vh
+
+
+    .template_service_section_footer
+      width: 100%
+      height: 50vh
+      background: $coloBlack
+
+      .section_footer_list
+        display: flex
+        height: 100%
+        li
+          display: flex
+          width: 50vw
+          height: 100%
+          a
+            display: flex
+            width: 100%
+            height: 100%
+            text-decoration: none
+            color: $coloWhite
+            background: url("../img/svg/image_68.svg")
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center center
+            position: relative
+            span
+              color: $coloWhite
+              z-index: 9
+            &:before
+              content: ''
+              width: 100%
+              height: 100%
+              position: absolute
+              background: $coloBlack
+              opacity: 1
+              transition: opacity .15s linear
+            &:hover
+              &:before
+                transition: opacity .15s linear
+                opacity: .9
+
+
+
+
+
+
+
+
+//TODO template_web
+body.template_service.template_web
+  #main
+    .template_service_section_hed
+      background: $colorRed
+
+
+    .template_service_section_after_hed
+      background: url("../img/svg/image_68.svg")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center

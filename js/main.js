@@ -2,7 +2,7 @@
 
 $(document).ready(function ($) {
 
-    var minh = $(window).height()/2;
+    var minh = $(window).height() / 2;
 
     $('.description_text').readmore({
         speed: 1000,
@@ -38,7 +38,6 @@ window.onload = function () {
         document.getElementById("main").classList.add("main-hide");
     }
 
-
     function getId(y) {
         return document.getElementById(y);
     }
@@ -58,6 +57,9 @@ window.onload = function () {
     getId("request2").onclick = function () {
         requestPopActive();
     };
+    getId("frontFooterRequest").onclick = function () {
+        requestPopActive();
+    };
 
     // scroll
     window.onscroll = function () {
@@ -67,7 +69,8 @@ window.onload = function () {
         var f = document.getElementById("scrollRegionFooter").getBoundingClientRect().top - 84;
 
         var h = document.getElementsByTagName("header")[0];
-        if (y < 0 && f > 0 ) {
+
+        if (y < 0 && f > 0) {
             h.classList.add("header_white");
         } else if (f < 0) {
             h.classList.remove("header_white");
