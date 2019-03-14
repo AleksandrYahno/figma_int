@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="request_pop">
+    <div class="request_header_fix">
+        <div class="header-wrapper">
+            <div class="header-wrapper_left">
+                <div class="main-logo">
+                    <a href="#!">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="133" height="49" viewBox="0 0 133 49"
+                             fill="none">
+                            <path d="M23.8438 8.8613H25.5656V16.8966H23.8438V8.8613Z" fill="#0D0D0D"/>
+                            <path d="M31.068 11.4897V16.8966H29.3462V8.8613H31.1055L34.8112 14.0805V8.8613H36.533V16.8966H34.886L31.068 11.4897Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M42.0354 10.3632H39.6773V8.8613H46.078V10.3632H43.7573V16.8966H42.0354V10.3632Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M49.1848 8.8613H54.8744V10.3257H50.9067V12.0904H54.7995V13.5548H50.9067V15.4322H54.8744V16.8966H49.1848V8.8613Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M58.5427 8.8613H60.2645V15.3946H63.6708V16.8966H58.5801V8.8613H58.5427Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M66.7776 8.8613H68.4994V15.3946H71.9057V16.8966H66.815V8.8613H66.7776Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M75.0499 8.8613H80.7395V10.3257H76.7717V12.0904H80.6646V13.5548H76.7717V15.4322H80.7395V16.8966H75.0499V8.8613Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M83.8837 12.8789C83.8837 10.4008 85.7553 8.71111 88.076 8.71111C89.9102 8.71111 90.9208 9.68736 91.4823 10.6636L90.0224 11.377C89.6856 10.7387 88.9744 10.213 88.076 10.213C86.6911 10.213 85.643 11.3395 85.643 12.8414C85.643 14.3433 86.6911 15.4697 88.076 15.4697C88.9744 15.4697 89.6856 14.9816 90.0224 14.3057L91.4823 15.0192C90.9208 16.0329 89.9102 17.0092 88.076 17.0092C85.7178 17.0467 83.8837 15.3571 83.8837 12.8789Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M96.6478 10.3632H94.2896V8.8613H100.69V10.3632H98.3696V16.8966H96.6478V10.3632Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M103.835 8.8613H105.556V13.6299C105.556 14.7563 106.155 15.5073 107.428 15.5073C108.663 15.5073 109.262 14.7188 109.262 13.6299V8.8613H110.984V13.6674C110.984 15.6575 109.861 17.0467 107.428 17.0467C104.995 17.0467 103.835 15.6575 103.835 13.705V8.8613Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M115.101 14.4559C115.663 15.0567 116.561 15.5448 117.647 15.5448C118.583 15.5448 119.032 15.0943 119.032 14.6437C119.032 14.0429 118.321 13.8176 117.422 13.6299C116.112 13.3295 114.428 12.954 114.428 11.1893C114.428 9.83755 115.588 8.74866 117.46 8.74866C118.732 8.74866 119.78 9.12414 120.566 9.8751L119.631 11.1142C118.994 10.5134 118.133 10.2506 117.347 10.2506C116.561 10.2506 116.187 10.5885 116.187 11.0766C116.187 11.6023 116.861 11.79 117.797 12.0153C119.107 12.3157 120.791 12.7287 120.791 14.4935C120.791 15.9579 119.743 17.0843 117.572 17.0843C116.037 17.0843 114.914 16.5586 114.166 15.8077L115.101 14.4559Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M24.2555 35.295C24.5924 35.6329 25.079 35.8958 25.7154 35.8958C26.1271 35.8958 26.3891 35.708 26.3891 35.4828C26.3891 35.2199 26.0897 35.1073 25.6031 34.9946C24.8544 34.8444 23.7689 34.6567 23.7689 33.5678C23.7689 32.7793 24.4427 32.1034 25.6031 32.1034C26.3517 32.1034 26.988 32.3287 27.4746 32.7418L26.8383 33.6054C26.464 33.2674 25.9399 33.1172 25.5282 33.1172C25.1164 33.1172 24.9667 33.2674 24.9667 33.4927C24.9667 33.718 25.2662 33.8307 25.7528 33.9057C26.5014 34.0559 27.5495 34.2812 27.5495 35.3326C27.5495 36.2713 26.8757 36.872 25.6405 36.872C24.7047 36.872 24.0684 36.5716 23.5818 36.1211L24.2555 35.295Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M30.9932 33.2299H29.7205V32.1785H33.5011V33.2299H32.191V36.7969H30.9932V33.2299Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M35.8218 32.2161H37.0196V34.9195C37.0196 35.4828 37.3191 35.8582 37.9554 35.8582C38.5917 35.8582 38.8912 35.4452 38.8912 34.9195V32.2161H40.089V34.9571C40.089 36.1211 39.4152 36.9096 37.9554 36.9096C36.4582 36.9096 35.8218 36.0835 35.8218 34.9571V32.2161Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M42.7841 32.2161H44.7305C46.1903 32.2161 47.2384 33.0797 47.2384 34.5065C47.2384 35.9333 46.1903 36.8345 44.7679 36.8345H42.8215V32.2161H42.7841ZM44.7305 35.7831C45.554 35.7831 46.0032 35.1824 46.0032 34.5065C46.0032 33.7931 45.5914 33.2299 44.7305 33.2299H43.9819V35.7831H44.7305Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M49.7089 32.2161H50.9067V36.8345H49.7089V32.2161Z" fill="#0D0D0D"/>
+                            <path d="M55.8102 32.141C57.2326 32.141 58.2806 33.1172 58.2806 34.5441C58.2806 35.9709 57.2326 36.9471 55.8102 36.9471C54.3878 36.9471 53.3397 35.9709 53.3397 34.5441C53.3397 33.1172 54.4252 32.141 55.8102 32.141ZM55.8102 33.1923C55.0241 33.1923 54.5375 33.7931 54.5375 34.5441C54.5375 35.295 55.0241 35.8958 55.8102 35.8958C56.5588 35.8958 57.0454 35.295 57.0454 34.5441C57.0828 33.7556 56.5962 33.1923 55.8102 33.1923Z"
+                                  fill="#0D0D0D"/>
+                            <path d="M67.8256 49H0.187157V23.2421H130.373V2.47816H2.47047V16.7464H0V0H132.881V25.7203H2.65763V46.5218H65.3552V32.1034H67.8256V49Z"
+                                  fill="#0D0D0D"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="btn-box">
+                    <button id="btn2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-wrapper_right">
+                <div class="tel">
+                    <a href="tel:+380674273833">+38 (067) 427—38—33</a>
+                </div>
+                <div class="request">
+                    <button id="requestHide">
+                        <span>Request Project Estimate</span>
+                        <span>+</span>
+                    </button>
+                </div>
+            </div>
+            <div class="left_wrapper">
+                <div class="leng_wrapper">
+                    <ul class="leng-link">
+                        <li><a href="#"><span>ENG</span></a></li>
+                        <li><a href="#" class="hide"><span>RU</span></a></li>
+                    </ul>
+                </div>
+                <div class="social_wrapper">
+                    <ul class="social-link">
+                        <li><a href="#"><span>FACEBOOK</span></a></li>
+                        <li><a href="#"><span>BEHANCE</span></a></li>
+                        <li><a href="#"><span>YOUTUBE</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-box">
+        <!--TODO МЕСТО ДЛЯ ФОРМЫ !!! -->
+        FORM
+    </div>
+    <div class="footer-box">
+        <div class="footer-wrapper">
+            <div class="footer-list-block">
+                <ul>
+                    <li><a href="#"><span>Web Development</span></a></li>
+                    <li><a href="#"><span>SEO</span></a></li>
+                    <li><a href="#"><span>PPC</span></a></li>
+                    <li><a href="#"><span>SMM</span></a></li>
+                    <li><a href="#"><span>Complex Internet Marketing</span></a></li>
+                    <li><a href="#"><span>Blog</span></a></li>
+                    <li><a href="#"><span>Contacts</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-address-block">
+                <div class="address_content">
+                    <p>
+                        Intellectus Studio <br>
+                        Office 240, N.Bazhan Ave., 36, <br>
+                        Kiev, Ukraine
+                        <a href="#">Find Us on Google Maps</a>
+                    </p>
+                    <a class="mail" href="mailto:info@intellectus—studio.com">info@intellectus—studio.com</a>
+                    <div class="phone-block">
+                        <a href="tel:+380442273326">+38 (044) 227—33—26</a>
+                        <a href="tel:+380954259587">+38 (095) 425—95—87</a>
+                        <a href="tel:+380674273833">+38 (067) 427—38—33</a>
+                    </div>
+                </div>
+                <div class="copi">© 2019 Intellectus—studio. All right reserved.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="header-wrapper">
+        <div class="header-wrapper_left">
+            <div class="main-logo">
+                <a href="#!">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="133" height="49" viewBox="0 0 133 49" fill="none">
+                        <path d="M23.8438 8.8613H25.5656V16.8966H23.8438V8.8613Z" fill="white"/>
+                        <path d="M31.068 11.4897V16.8966H29.3462V8.8613H31.1055L34.8112 14.0805V8.8613H36.533V16.8966H34.886L31.068 11.4897Z"
+                              fill="white"/>
+                        <path d="M42.0354 10.3632H39.6773V8.8613H46.078V10.3632H43.7573V16.8966H42.0354V10.3632Z"
+                              fill="white"/>
+                        <path d="M49.1848 8.8613H54.8744V10.3257H50.9067V12.0904H54.7995V13.5548H50.9067V15.4322H54.8744V16.8966H49.1848V8.8613Z"
+                              fill="white"/>
+                        <path d="M58.5427 8.8613H60.2645V15.3946H63.6708V16.8966H58.5801V8.8613H58.5427Z" fill="white"/>
+                        <path d="M66.7776 8.8613H68.4994V15.3946H71.9057V16.8966H66.815V8.8613H66.7776Z" fill="white"/>
+                        <path d="M75.0499 8.8613H80.7395V10.3257H76.7717V12.0904H80.6646V13.5548H76.7717V15.4322H80.7395V16.8966H75.0499V8.8613Z"
+                              fill="white"/>
+                        <path d="M83.8837 12.8789C83.8837 10.4008 85.7553 8.71111 88.076 8.71111C89.9102 8.71111 90.9208 9.68736 91.4823 10.6636L90.0224 11.377C89.6856 10.7387 88.9744 10.213 88.076 10.213C86.6911 10.213 85.643 11.3395 85.643 12.8414C85.643 14.3433 86.6911 15.4697 88.076 15.4697C88.9744 15.4697 89.6856 14.9816 90.0224 14.3057L91.4823 15.0192C90.9208 16.0329 89.9102 17.0092 88.076 17.0092C85.7178 17.0467 83.8837 15.3571 83.8837 12.8789Z"
+                              fill="white"/>
+                        <path d="M96.6478 10.3632H94.2896V8.8613H100.69V10.3632H98.3696V16.8966H96.6478V10.3632Z"
+                              fill="white"/>
+                        <path d="M103.835 8.8613H105.556V13.6299C105.556 14.7563 106.155 15.5073 107.428 15.5073C108.663 15.5073 109.262 14.7188 109.262 13.6299V8.8613H110.984V13.6674C110.984 15.6575 109.861 17.0467 107.428 17.0467C104.995 17.0467 103.835 15.6575 103.835 13.705V8.8613Z"
+                              fill="white"/>
+                        <path d="M115.101 14.4559C115.663 15.0567 116.561 15.5448 117.647 15.5448C118.583 15.5448 119.032 15.0943 119.032 14.6437C119.032 14.0429 118.321 13.8176 117.422 13.6299C116.112 13.3295 114.428 12.954 114.428 11.1893C114.428 9.83755 115.588 8.74866 117.46 8.74866C118.732 8.74866 119.78 9.12414 120.566 9.8751L119.631 11.1142C118.994 10.5134 118.133 10.2506 117.347 10.2506C116.561 10.2506 116.187 10.5885 116.187 11.0766C116.187 11.6023 116.861 11.79 117.797 12.0153C119.107 12.3157 120.791 12.7287 120.791 14.4935C120.791 15.9579 119.743 17.0843 117.572 17.0843C116.037 17.0843 114.914 16.5586 114.166 15.8077L115.101 14.4559Z"
+                              fill="white"/>
+                        <path d="M24.2555 35.295C24.5924 35.6329 25.079 35.8958 25.7154 35.8958C26.1271 35.8958 26.3891 35.708 26.3891 35.4828C26.3891 35.2199 26.0897 35.1073 25.6031 34.9946C24.8544 34.8444 23.7689 34.6567 23.7689 33.5678C23.7689 32.7793 24.4427 32.1034 25.6031 32.1034C26.3517 32.1034 26.988 32.3287 27.4746 32.7418L26.8383 33.6054C26.464 33.2674 25.9399 33.1172 25.5282 33.1172C25.1164 33.1172 24.9667 33.2674 24.9667 33.4927C24.9667 33.718 25.2662 33.8307 25.7528 33.9057C26.5014 34.0559 27.5495 34.2812 27.5495 35.3326C27.5495 36.2713 26.8757 36.872 25.6405 36.872C24.7047 36.872 24.0684 36.5716 23.5818 36.1211L24.2555 35.295Z"
+                              fill="white"/>
+                        <path d="M30.9932 33.2299H29.7205V32.1785H33.5011V33.2299H32.191V36.7969H30.9932V33.2299Z"
+                              fill="white"/>
+                        <path d="M35.8218 32.2161H37.0196V34.9195C37.0196 35.4828 37.3191 35.8582 37.9554 35.8582C38.5917 35.8582 38.8912 35.4452 38.8912 34.9195V32.2161H40.089V34.9571C40.089 36.1211 39.4152 36.9096 37.9554 36.9096C36.4582 36.9096 35.8218 36.0835 35.8218 34.9571V32.2161Z"
+                              fill="white"/>
+                        <path d="M42.7841 32.2161H44.7305C46.1903 32.2161 47.2384 33.0797 47.2384 34.5065C47.2384 35.9333 46.1903 36.8345 44.7679 36.8345H42.8215V32.2161H42.7841ZM44.7305 35.7831C45.554 35.7831 46.0032 35.1824 46.0032 34.5065C46.0032 33.7931 45.5914 33.2299 44.7305 33.2299H43.9819V35.7831H44.7305Z"
+                              fill="white"/>
+                        <path d="M49.7089 32.2161H50.9067V36.8345H49.7089V32.2161Z" fill="white"/>
+                        <path d="M55.8102 32.141C57.2326 32.141 58.2806 33.1172 58.2806 34.5441C58.2806 35.9709 57.2326 36.9471 55.8102 36.9471C54.3878 36.9471 53.3397 35.9709 53.3397 34.5441C53.3397 33.1172 54.4252 32.141 55.8102 32.141ZM55.8102 33.1923C55.0241 33.1923 54.5375 33.7931 54.5375 34.5441C54.5375 35.295 55.0241 35.8958 55.8102 35.8958C56.5588 35.8958 57.0454 35.295 57.0454 34.5441C57.0828 33.7556 56.5962 33.1923 55.8102 33.1923Z"
+                              fill="white"/>
+                        <path d="M67.8256 49H0.187157V23.2421H130.373V2.47816H2.47047V16.7464H0V0H132.881V25.7203H2.65763V46.5218H65.3552V32.1034H67.8256V49Z"
+                              fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="btn-box">
+                <button id="btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="header-wrapper_right">
+            <div class="tel">
+                <a href="tel:+380674273833">+38 (067) 427—38—33</a>
+            </div>
+            <div class="request">
+                <button id="request">
+                    <span>Request Project Estimate</span>
+                    <span>+</span>
+                </button>
+            </div>
+        </div>
+        <div class="left_wrapper">
+            <div class="leng_wrapper">
+                <ul class="leng-link">
+                    <li><a href="#"><span>ENG</span></a></li>
+                    <li><a href="#" class="hide"><span>RU</span></a></li>
+                </ul>
+            </div>
+            <div class="social_wrapper">
+                <ul class="social-link">
+                    <li><a href="#"><span>FACEBOOK</span></a></li>
+                    <li><a href="#"><span>BEHANCE</span></a></li>
+                    <li><a href="#"><span>YOUTUBE</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="menu_pop">
+    <div class="header-wrapper">
+        <div class="header-wrapper_left">
+            <div class="main-logo">
+                <a href="#!">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="133" height="49" viewBox="0 0 133 49" fill="none">
+                        <path d="M23.8438 8.8613H25.5656V16.8966H23.8438V8.8613Z" fill="white"/>
+                        <path d="M31.068 11.4897V16.8966H29.3462V8.8613H31.1055L34.8112 14.0805V8.8613H36.533V16.8966H34.886L31.068 11.4897Z"
+                              fill="white"/>
+                        <path d="M42.0354 10.3632H39.6773V8.8613H46.078V10.3632H43.7573V16.8966H42.0354V10.3632Z"
+                              fill="white"/>
+                        <path d="M49.1848 8.8613H54.8744V10.3257H50.9067V12.0904H54.7995V13.5548H50.9067V15.4322H54.8744V16.8966H49.1848V8.8613Z"
+                              fill="white"/>
+                        <path d="M58.5427 8.8613H60.2645V15.3946H63.6708V16.8966H58.5801V8.8613H58.5427Z" fill="white"/>
+                        <path d="M66.7776 8.8613H68.4994V15.3946H71.9057V16.8966H66.815V8.8613H66.7776Z" fill="white"/>
+                        <path d="M75.0499 8.8613H80.7395V10.3257H76.7717V12.0904H80.6646V13.5548H76.7717V15.4322H80.7395V16.8966H75.0499V8.8613Z"
+                              fill="white"/>
+                        <path d="M83.8837 12.8789C83.8837 10.4008 85.7553 8.71111 88.076 8.71111C89.9102 8.71111 90.9208 9.68736 91.4823 10.6636L90.0224 11.377C89.6856 10.7387 88.9744 10.213 88.076 10.213C86.6911 10.213 85.643 11.3395 85.643 12.8414C85.643 14.3433 86.6911 15.4697 88.076 15.4697C88.9744 15.4697 89.6856 14.9816 90.0224 14.3057L91.4823 15.0192C90.9208 16.0329 89.9102 17.0092 88.076 17.0092C85.7178 17.0467 83.8837 15.3571 83.8837 12.8789Z"
+                              fill="white"/>
+                        <path d="M96.6478 10.3632H94.2896V8.8613H100.69V10.3632H98.3696V16.8966H96.6478V10.3632Z"
+                              fill="white"/>
+                        <path d="M103.835 8.8613H105.556V13.6299C105.556 14.7563 106.155 15.5073 107.428 15.5073C108.663 15.5073 109.262 14.7188 109.262 13.6299V8.8613H110.984V13.6674C110.984 15.6575 109.861 17.0467 107.428 17.0467C104.995 17.0467 103.835 15.6575 103.835 13.705V8.8613Z"
+                              fill="white"/>
+                        <path d="M115.101 14.4559C115.663 15.0567 116.561 15.5448 117.647 15.5448C118.583 15.5448 119.032 15.0943 119.032 14.6437C119.032 14.0429 118.321 13.8176 117.422 13.6299C116.112 13.3295 114.428 12.954 114.428 11.1893C114.428 9.83755 115.588 8.74866 117.46 8.74866C118.732 8.74866 119.78 9.12414 120.566 9.8751L119.631 11.1142C118.994 10.5134 118.133 10.2506 117.347 10.2506C116.561 10.2506 116.187 10.5885 116.187 11.0766C116.187 11.6023 116.861 11.79 117.797 12.0153C119.107 12.3157 120.791 12.7287 120.791 14.4935C120.791 15.9579 119.743 17.0843 117.572 17.0843C116.037 17.0843 114.914 16.5586 114.166 15.8077L115.101 14.4559Z"
+                              fill="white"/>
+                        <path d="M24.2555 35.295C24.5924 35.6329 25.079 35.8958 25.7154 35.8958C26.1271 35.8958 26.3891 35.708 26.3891 35.4828C26.3891 35.2199 26.0897 35.1073 25.6031 34.9946C24.8544 34.8444 23.7689 34.6567 23.7689 33.5678C23.7689 32.7793 24.4427 32.1034 25.6031 32.1034C26.3517 32.1034 26.988 32.3287 27.4746 32.7418L26.8383 33.6054C26.464 33.2674 25.9399 33.1172 25.5282 33.1172C25.1164 33.1172 24.9667 33.2674 24.9667 33.4927C24.9667 33.718 25.2662 33.8307 25.7528 33.9057C26.5014 34.0559 27.5495 34.2812 27.5495 35.3326C27.5495 36.2713 26.8757 36.872 25.6405 36.872C24.7047 36.872 24.0684 36.5716 23.5818 36.1211L24.2555 35.295Z"
+                              fill="white"/>
+                        <path d="M30.9932 33.2299H29.7205V32.1785H33.5011V33.2299H32.191V36.7969H30.9932V33.2299Z"
+                              fill="white"/>
+                        <path d="M35.8218 32.2161H37.0196V34.9195C37.0196 35.4828 37.3191 35.8582 37.9554 35.8582C38.5917 35.8582 38.8912 35.4452 38.8912 34.9195V32.2161H40.089V34.9571C40.089 36.1211 39.4152 36.9096 37.9554 36.9096C36.4582 36.9096 35.8218 36.0835 35.8218 34.9571V32.2161Z"
+                              fill="white"/>
+                        <path d="M42.7841 32.2161H44.7305C46.1903 32.2161 47.2384 33.0797 47.2384 34.5065C47.2384 35.9333 46.1903 36.8345 44.7679 36.8345H42.8215V32.2161H42.7841ZM44.7305 35.7831C45.554 35.7831 46.0032 35.1824 46.0032 34.5065C46.0032 33.7931 45.5914 33.2299 44.7305 33.2299H43.9819V35.7831H44.7305Z"
+                              fill="white"/>
+                        <path d="M49.7089 32.2161H50.9067V36.8345H49.7089V32.2161Z" fill="white"/>
+                        <path d="M55.8102 32.141C57.2326 32.141 58.2806 33.1172 58.2806 34.5441C58.2806 35.9709 57.2326 36.9471 55.8102 36.9471C54.3878 36.9471 53.3397 35.9709 53.3397 34.5441C53.3397 33.1172 54.4252 32.141 55.8102 32.141ZM55.8102 33.1923C55.0241 33.1923 54.5375 33.7931 54.5375 34.5441C54.5375 35.295 55.0241 35.8958 55.8102 35.8958C56.5588 35.8958 57.0454 35.295 57.0454 34.5441C57.0828 33.7556 56.5962 33.1923 55.8102 33.1923Z"
+                              fill="white"/>
+                        <path d="M67.8256 49H0.187157V23.2421H130.373V2.47816H2.47047V16.7464H0V0H132.881V25.7203H2.65763V46.5218H65.3552V32.1034H67.8256V49Z"
+                              fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="btn-box">
+                <button id="btnHide">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="header-wrapper_right">
+            <div class="tel">
+                <a href="tel:+380674273833">+38 (067) 427—38—33</a>
+            </div>
+            <div class="request">
+                <button id="request2">
+                    <span>Request Project Estimate</span>
+                    <span>+</span>
+                </button>
+            </div>
+        </div>
+        <div class="left_wrapper">
+            <div class="leng_wrapper">
+                <ul class="leng-link">
+                    <li><a href="#"><span>ENG</span></a></li>
+                    <li><a href="#" class="hide"><span>RU</span></a></li>
+                </ul>
+            </div>
+            <div class="social_wrapper">
+                <ul class="social-link">
+                    <li><a href="#"><span>FACEBOOK</span></a></li>
+                    <li><a href="#"><span>BEHANCE</span></a></li>
+                    <li><a href="#"><span>YOUTUBE</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu_pop_bg_logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1360" height="117" viewBox="0 0 1360 117" fill="none">
+                <path d="M0 2.09866H24.1544V114.377H0V2.09866Z" fill="#B1B1B1" fill-opacity="0.02"/>
+                <path d="M101.344 38.8251V114.377H77.1892V2.09866H101.869L153.853 75.0269V2.09866H178.008V114.377H154.903L101.344 38.8251Z"
+                      fill="#B1B1B1" fill-opacity="0.02"/>
+                <path d="M255.197 23.0852H222.116V2.09866H311.907V23.0852H279.351V114.377H255.197V23.0852Z"
+                      fill="#B1B1B1" fill-opacity="0.02"/>
+                <path d="M355.49 2.09866H435.305V22.5605H379.645V47.2197H434.255V67.6816H379.645V93.9148H435.305V114.377H355.49V2.09866Z"
+                      fill="#B1B1B1" fill-opacity="0.02"/>
+                <path d="M486.764 2.09866H510.919V93.3901H558.703V114.377H487.29V2.09866H486.764Z" fill="#B1B1B1"
+                      fill-opacity="0.02"/>
+                <path d="M602.286 2.09866H626.44V93.3901H674.224V114.377H602.811V2.09866H602.286Z" fill="#B1B1B1"
+                      fill-opacity="0.02"/>
+                <path d="M718.332 2.09866H798.147V22.5605H742.486V47.2197H797.096V67.6816H742.486V93.9148H798.147V114.377H718.332V2.09866Z"
+                      fill="#B1B1B1" fill-opacity="0.02"/>
+                <path d="M842.255 58.2377C842.255 23.6099 868.51 0 901.066 0C926.795 0 940.973 13.6413 948.849 27.2825L928.371 37.2511C923.645 28.3318 913.668 20.9866 901.066 20.9866C881.637 20.9866 866.934 36.7265 866.934 57.713C866.934 78.6996 881.637 94.4395 901.066 94.4395C913.668 94.4395 923.645 87.6188 928.371 78.1749L948.849 88.1435C940.973 102.309 926.795 115.951 901.066 115.951C867.984 116.475 842.255 92.8655 842.255 58.2377Z"
+                      fill="#B1B1B1" fill-opacity="0.02"/>
+                <path d="M1021.31 23.0852H988.232V2.09866H1078.02V23.0852H1045.47V114.377H1021.31V23.0852Z"
+                      fill="#B1B1B1" fill-opacity="0.02"/>
+                <path d="M1122.13 2.09866H1146.29V68.7309C1146.29 84.4709 1154.69 94.9641 1172.54 94.9641C1189.87 94.9641 1198.27 83.9462 1198.27 68.7309V2.09866H1222.42V69.2556C1222.42 97.0628 1206.67 116.475 1172.54 116.475C1138.41 116.475 1122.13 97.0628 1122.13 69.7803V2.09866Z"
+                      fill="#B1B1B1" fill-opacity="0.02"/>
+                <path d="M1280.19 80.2735C1288.06 88.6682 1300.66 95.4888 1315.89 95.4888C1329.02 95.4888 1335.32 89.1928 1335.32 82.8969C1335.32 74.5022 1325.34 71.3543 1312.74 68.7309C1294.36 64.5336 1270.73 59.287 1270.73 34.6278C1270.73 15.7399 1287.01 0.524666 1313.27 0.524666C1331.12 0.524666 1345.82 5.7713 1356.85 16.2646L1343.72 33.5785C1334.8 25.1839 1322.72 21.5112 1311.69 21.5112C1300.66 21.5112 1295.41 26.2332 1295.41 33.0538C1295.41 40.3991 1304.86 43.0224 1317.99 46.1704C1336.37 50.3677 1360 56.139 1360 80.7982C1360 101.26 1345.3 117 1314.84 117C1293.31 117 1277.56 109.655 1267.06 99.1614L1280.19 80.2735Z"
+                      fill="#B1B1B1" fill-opacity="0.02"/>
+            </svg>
+        </div>
+    </div>
+    <div class="menu_pop_wrapper">
+        <div class="menu_box">
+            <ul>
+                <li><a href="#"><span>Web Development</span></a></li>
+                <li><a href="#"><span>SEO</span></a></li>
+                <li><a href="#"><span>PPC</span></a></li>
+                <li><a href="#"><span>SMM</span></a></li>
+                <li><a href="#"><span>Complex Internet Marketing</span></a></li>
+                <li><a href="#"><span>Blog</span></a></li>
+                <li><a href="#"><span>Contacts</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="main">
+
+    <section class="front_01">
+        <div class="description">
+            <p>
+                Intellectus Studio – работает в области интернет-маркетинга более 5 лет, занимается созданием, а также продвижением сайтов. Команда профессионалов поможет существенно увеличить прибыль от Вашего веб-сайта, сделать Ваш бренд узнаваемым, улучшить показатель возврата инвестиций в рекламу и отправить Ваших конкурентов на отстающие позиции в поисковой выдаче.
+            </p>
+        </div>
+    </section>
+
+    <section class="front_02">
+        <div class="description">
+            <div class="title">
+                <h3>Since 2014 we have</h3>
+            </div>
+            <div class="number-wrapper">
+                <div class="number-row">
+                    <div class="number_flex">
+                        <div class="number_box">
+                            <span>+</span>
+                            <span>100</span>
+                            <span>РЕАЛИЗОВАНЫХ ПРОЭКТОВ</span>
+                        </div>
+                    </div>
+                    <div class="number_flex">
+                        <div class="number_box">
+                            <span>+</span>
+                            <span>150</span>
+                            <span>УСПЕШНЫХ КЕЙСОВ</span>
+                        </div>
+                    </div>
+                    <div class="number_flex">
+                        <div class="number_box">
+                            <span>+</span>
+                            <span>300</span>
+                            <span>ПРИВЕДЕННЫХ КЛИЕНТОВ</span>
+                        </div>
+                    </div>
+                    <div class="number_flex">
+                        <div class="number_box">
+                            <span>+</span>
+                            <span>70</span>
+                            <span>сайтов в топ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WEB -->
+    <section class="front_service">
+        <div class="front_service_wrapper">
+            <a href="#" class="front_service_link service_web">
+                <div class="description_servise">
+                    <span>Услуги / 01</span>
+                    <h3 class="h3">Web Development</h3>
+                    <p>Создание продающих сайтов и сервисов с креативным дизайном на различных CMS системах</p>
+                </div>
+                <div class="background_servise"></div>
+                <div class="front_service_button">
+                    <span class="read">Read more</span>
+                    <span class="line"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- SEO -->
+    <section class="front_service">
+        <div class="front_service_wrapper">
+            <a href="#" class="front_service_link service_seo">
+                <div class="description_servise">
+                    <span>Услуги / 02</span>
+                    <h3 class="h3">SEO</h3>
+                    <p>Продвижение сайта в органике, соц сетях и черехз рекламу Google Adwords Мы умеем привлекать интернет продажи</p>
+                </div>
+                <div class="background_servise"></div>
+                <div class="front_service_button">
+                    <span class="read">Read more</span>
+                    <span class="line"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- PPC -->
+    <section class="front_service">
+        <div class="front_service_wrapper">
+            <a href="#" class="front_service_link service_ppc">
+                <div class="description_servise">
+                    <span>Услуги / 03</span>
+                    <h3 class="h3">PPC</h3>
+                    <p>У нас есть большой опыт проведения рекламных кампаний, а эффективность наших методик доказана на практике. Более того, весь процесс предельно прозрачен, предоставляется вся необходимая отчетность (как периодическая, так и в любой момент по требованию Заказчика).</p>
+                </div>
+                <div class="background_servise"></div>
+                <div class="front_service_button">
+                    <span class="read">Read more</span>
+                    <span class="line"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- SMM -->
+    <section class="front_service">
+        <div class="front_service_wrapper">
+            <a href="#" class="front_service_link service_smm">
+                <div class="description_servise">
+                    <span>Услуги / 04</span>
+                    <h3 class="h3">SMM</h3>
+                    <p>Наши специалисты по рекламе в соц сетях обеспечат вашему бренду узнаваемость используя правильные стратегии продвижения увеличат приток релевантного трафика и повысят показатели конверсии у Вас на сайте в краткие сроки.</p>
+                </div>
+                <div class="background_servise"></div>
+                <div class="front_service_button">
+                    <span class="read">Read more</span>
+                    <span class="line"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- COMPLEX -->
+    <section class="front_service last_service">
+        <div class="front_service_wrapper">
+            <a href="#" class="front_service_link service_complex">
+                <div class="description_servise">
+                    <span>Услуги / 05</span>
+                    <h3 class="h3">Complex Internet Marketing</h3>
+                    <p>Creation of selling websites and services with creative design on various CMS systems</p>
+                </div>
+                <div class="background_servise"></div>
+                <div class="front_service_button">
+                    <span class="read">Read more</span>
+                    <span class="line"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="front_clients" id="scrollRegion">
+        <div class="front_clients_wrapper">
+            <div class="title">
+                <h3 class="h3">Our Clients</h3>
+            </div>
+            <div class="icon_wrapper">
+                <div class="icon_box"><img src="img/svg/902.svg" alt="icon"></div>
+                <div class="icon_box"><img src="img/svg/903.svg" alt="icon"></div>
+                <div class="icon_box"><img src="img/svg/901.svg" alt="icon"></div>
+                <div class="icon_box"><img src="img/svg/906.svg" alt="icon"></div>
+                <div class="icon_box"><img src="img/svg/905.svg" alt="icon"></div>
+                <div class="icon_box"><img src="img/svg/904.svg" alt="icon"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="front_form">
+        <div class="form-box">
+            <!--TODO МЕСТО ДЛЯ ФОРМЫ !!! -->
+            FORM
+        </div>
+    </section>
+
+    <section class="front_posts">
+        <div class="front_posts_wrapper">
+            <div class="title_row">
+                <h3 class="h3">Latest posts</h3>
+
+                <a href="#" class="more">Read more posts</a>
+            </div>
+            <div class="content_row">
+                <div class="post_box">
+                    <a href="#" class="post_box_link">
+                        <img class="post_img" src="img/image_3.png" alt="img">
+                        <span class="post_data">Jan 30, 2019</span>
+                        <p class="post_teaser_text">Micro Conversions: What They Are, Why They Matter & How to Track Them</p>
+                    </a>
+                </div>
+                <div class="post_box">
+                    <a href="#" class="post_box_link">
+                        <img class="post_img" src="img/image_4.png" alt="img">
+                        <span class="post_data">Jan 30, 2019</span>
+                        <p class="post_teaser_text">How to Make Money on YouTube, According to 3 People Who Do</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="front_description">
+        <div class="front_description_wrapper">
+            <div class="title">Intellectus Studio</div>
+            <div class="description_content">
+                <div class="description_text">
+                    <p>
+                        Intellectus Studio has been working in the field of Internet marketing for more than 5 years, has been creating and promoting websites. A team of professionals will help to significantly increase profits from your website, make your brand recognizable, improve the rate of return on investment in advertising and send your competitors to lagging positions in search results.
+                    </p>
+                    <p>
+                        During the work of the web-studio, a lot of experience was gained and more than 180 websites of various fields of activity and functional complexity, creative design, multimedia solutions, printing, with a huge amount of content were created. We provide a range of services incl. on SEO promotion and search engine optimization, contextual advertising and promotion in social networks.
+                    </p>
+                    <p>
+                        Intellectus Studio will provide you with a product that fully meets modern requirements - we constantly monitor the most advanced technologies and current trends in Internet technologies.
+                    </p>
+                    <p>
+                        We are trusted by the construction, metallurgical, automobile, and trade industries, as well as by representatives of small and medium-sized businesses, science, culture, and public organizations.
+                    </p>
+                    <p>
+                        We have developed and maintained sites from Ukraine, the CIS, America and Europe. Order the creation and promotion of the site now, to be one step ahead of the competition!
+                    </p>
+                    <!-- ??? -->
+                    <p>
+                        Intellectus Studio has been working in the field of Internet marketing for more than 5 years, has been creating and promoting websites. A team of professionals will help to significantly increase profits from your website, make your brand recognizable, improve the rate of return on investment in advertising and send your competitors to lagging positions in search results.
+                    </p>
+                    <p>
+                        During the work of the web-studio, a lot of experience was gained and more than 180 websites of various fields of activity and functional complexity, creative design, multimedia solutions, printing, with a huge amount of content were created. We provide a range of services incl. on SEO promotion and search engine optimization, contextual advertising and promotion in social networks.
+                    </p>
+                    <p>
+                        Intellectus Studio will provide you with a product that fully meets modern requirements - we constantly monitor the most advanced technologies and current trends in Internet technologies.
+                    </p>
+                    <p>
+                        We are trusted by the construction, metallurgical, automobile, and trade industries, as well as by representatives of small and medium-sized businesses, science, culture, and public organizations.
+                    </p>
+                    <p>
+                        We have developed and maintained sites from Ukraine, the CIS, America and Europe. Order the creation and promotion of the site now, to be one step ahead of the competition!
+                    </p>
+                    <!-- ??? -->
+                    <p>
+                        Intellectus Studio has been working in the field of Internet marketing for more than 5 years, has been creating and promoting websites. A team of professionals will help to significantly increase profits from your website, make your brand recognizable, improve the rate of return on investment in advertising and send your competitors to lagging positions in search results.
+                    </p>
+                    <p>
+                        During the work of the web-studio, a lot of experience was gained and more than 180 websites of various fields of activity and functional complexity, creative design, multimedia solutions, printing, with a huge amount of content were created. We provide a range of services incl. on SEO promotion and search engine optimization, contextual advertising and promotion in social networks.
+                    </p>
+                    <p>
+                        Intellectus Studio will provide you with a product that fully meets modern requirements - we constantly monitor the most advanced technologies and current trends in Internet technologies.
+                    </p>
+                    <p>
+                        We are trusted by the construction, metallurgical, automobile, and trade industries, as well as by representatives of small and medium-sized businesses, science, culture, and public organizations.
+                    </p>
+                    <p>
+                        We have developed and maintained sites from Ukraine, the CIS, America and Europe. Order the creation and promotion of the site now, to be one step ahead of the competition!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="front_footer" id="scrollRegionFooter">
+        <div class="front_footer_request">
+            <a href="#" id="frontFooterRequest">
+                <div class="link_title">
+                    <span>Request Project</span>
+                    <span>Estimate</span>
+                </div>
+                <div class="link_icon">
+                    <span>+</span>
+                </div>
+            </a>
+        </div>
+        <div class="footer-box">
+            <div class="footer-wrapper">
+                <div class="footer-list-block">
+                    <ul>
+                        <li><a href="#"><span>Web Development</span></a></li>
+                        <li><a href="#"><span>SEO</span></a></li>
+                        <li><a href="#"><span>PPC</span></a></li>
+                        <li><a href="#"><span>SMM</span></a></li>
+                        <li><a href="#"><span>Complex Internet Marketing</span></a></li>
+                        <li><a href="#"><span>Blog</span></a></li>
+                        <li><a href="#"><span>Contacts</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-address-block">
+                    <div class="address_content">
+                        <p>
+                            Intellectus Studio <br>
+                            Office 240, N.Bazhan Ave., 36, <br>
+                            Kiev, Ukraine
+                            <a href="#">Find Us on Google Maps</a>
+                        </p>
+                        <a class="mail" href="mailto:info@intellectus—studio.com">info@intellectus—studio.com</a>
+                        <div class="phone-block">
+                            <a href="tel:+380442273326">+38 (044) 227—33—26</a>
+                            <a href="tel:+380954259587">+38 (095) 425—95—87</a>
+                            <a href="tel:+380674273833">+38 (067) 427—38—33</a>
+                        </div>
+                    </div>
+                    <div class="copi">© 2019 Intellectus—studio. All right reserved.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="js/readmore.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

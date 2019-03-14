@@ -29,7 +29,6 @@ table
 
 
 // main style
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic')
 $fontMontserrat: 'Montserrat', sans-serif
 $coloWhite: #FFFFFF
@@ -37,7 +36,6 @@ $coloBlack: #0D0D0D
 $colorDifGray: #141414
 $colorBg: #0D0D0D
 $colorLiteGray: #ECECEB
-
 $colorBgLiteGray: #F3F3F1
 
 $colorRed: #EB5656
@@ -46,9 +44,7 @@ $colorGreen: #56EBAC
 $colorBlue: #56C7EB
 $colorPurple: #C87DF6
 
-
 $colorTextGray: rgba(20, 20, 20, .5)
-
 $colorDarkGray:  #171717
 
 *
@@ -1179,7 +1175,6 @@ body.template_service
                 &:after
                   background: $coloBlack
 
-
   #main
     margin-top: 84px
     .template_service_wrapper
@@ -1188,13 +1183,11 @@ body.template_service
       margin-left: 22vw
       margin-right: 16vw
 
-
     .template_service_wrapper-case
       width: 100%
       max-width: 74vw
       margin-left: 22vw
       margin-right: 4vw
-
 
     .template_service_section_hed
       width: 100%
@@ -1223,11 +1216,9 @@ body.template_service
             font-size: 20px
             letter-spacing: 0.03em
 
-
     .template_service_section_after_hed
       width: 100%
       height: 50vh
-
 
     .template_service_section_hed_description
       width: 100%
@@ -1253,7 +1244,6 @@ body.template_service
           font-weight: 300
           width: 49%
 
-
     .template_service_section_main-text
       width: 100%
       height: calc(100vh - 84px - 100px)
@@ -1269,11 +1259,36 @@ body.template_service
         line-height: 51px
         color: $colorBg
 
-
     .template_service_section_case
       .template_service_wrapper-case
         display: flex
+        flex-wrap: wrap
         justify-content: space-between
+        .head_case
+          width: 100%
+          min-width: 100%
+          .head_case-img
+            img
+              width: 100%
+              height: auto
+              margin-bottom: 31px
+            p
+              font-style: normal
+              font-weight: normal
+              font-size: 14px
+              line-height: 22px
+              letter-spacing: 0.03em
+              color: $coloBlack
+          .head_case-text
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            line-height: 34px
+            letter-spacing: 0.03em
+            color: $coloBlack
+            margin: 25vh 12vw 25vh 0
+
+
         .left_case
           width: 100%
           max-width: 27vw
@@ -1354,12 +1369,28 @@ body.template_service
                     color: $coloWhite
                     transition: all .15s ease-in-out
 
+    .template_service_section_pre-footer
+      width: 100%
+      height: calc(100vh - 84px)
+      background: $coloBlack
+      display: flex
+      align-items: center
+      box-sizing: border-box
+      margin-top: -200px
+      padding-top: 200px
+      .template_service_wrapper
+        .pre-footer_text
+          font-style: normal
+          font-weight: normal
+          font-size: 20px
+          line-height: 34px
+          letter-spacing: 0.03em
+          color: $colorBg
 
     .template_service_section_footer
       width: 100%
       height: 50vh
       background: $coloBlack
-
       .section_footer_list
         display: flex
         height: 100%
@@ -1420,20 +1451,182 @@ body.template_service
                 opacity: .9
 
 
-
-
-
-
 //TODO template_web
 body.template_service.template_web
   #main
+    .template_service_section_hed
+      position: relative
+      &:after
+        content: ''
+        display: flex
+        align-items: center
+        width: 52vw
+        height: 100%
+        position: absolute
+        top: 0
+        right: 0
+        background: url("../img/svg/W.svg")
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center center
+
+
     .template_service_section_hed,
     .template_service_section_main-text
       background: $colorRed
-
-
     .template_service_section_after_hed
       background: url("../img/svg/image_68.svg")
       background-repeat: no-repeat
       background-size: cover
       background-position: center center
+
+
+//TODO template_ppc
+body.template_service.template_ppc
+  header
+    background: transparent
+  #main
+    margin-top: 0
+    .template_service_section_hed
+      padding-top: 84px
+      position: relative
+      &:after
+        content: ''
+        display: flex
+        align-items: center
+        width: 52vw
+        height: calc(70% - 84px)
+        position: absolute
+        top: calc(15% + 84px)
+        right: 0
+        background: url("../img/svg/P.svg")
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center center
+
+
+    .template_service_section_hed,
+    .template_service_section_main-text
+      background: $colorGreen
+    .template_service_section_after_hed
+      background: url("../img/svg/image_ppc.svg")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+
+
+//TODO template_cim
+body.template_service.template_cim
+  header
+    background: transparent
+  #main
+    margin-top: 0
+    .template_service_section_hed
+      padding-top: 84px
+      position: relative
+      &:after
+        content: ''
+        display: flex
+        align-items: center
+        width: 52vw
+        height: calc(70% - 84px)
+        position: absolute
+        top: calc(15% + 84px)
+        right: 0
+        background: url("../img/svg/C.svg")
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center center
+
+    .template_service_section_hed,
+    .template_service_section_main-text
+      background: $colorPurple
+    .template_service_section_after_hed
+      background: url("../img/svg/image_cim.svg")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+
+
+
+//TODO template_seo
+body.template_service.template_seo
+  header
+    background: transparent
+  #main
+    margin-top: 0
+    .template_service_section_hed
+      padding-top: 84px
+      position: relative
+      &:after
+        content: ''
+        display: flex
+        align-items: center
+        width: 52vw
+        height: calc(70% - 84px)
+        position: absolute
+        top: calc(15% + 84px)
+        right: 0
+        background: url("../img/svg/S.svg")
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center center
+
+    .template_service_section_hed,
+    .template_service_section_main-text,
+    .template_service_section_pre-footer
+      background: $colorYellow
+    .template_service_section_after_hed
+      background: url("../img/svg/image_seo.svg")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+
+    .template_service_section_case
+      .template_service_wrapper-case
+        .left_case,
+        .right_case
+          .case:last-child
+            margin-bottom: 0
+
+
+//TODO template_smm
+body.template_service.template_smm
+  header
+    background: transparent
+  #main
+    margin-top: 0
+    .template_service_section_hed
+      padding-top: 84px
+      position: relative
+      &:after
+        content: ''
+        display: flex
+        align-items: center
+        width: 52vw
+        height: calc(70% - 84px)
+        position: absolute
+        top: calc(15% + 84px)
+        right: 0
+        background: url("../img/svg/S.svg")
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center center
+
+
+    .template_service_section_hed,
+    .template_service_section_main-text,
+    .template_service_section_pre-footer
+      background: $colorBlue
+    .template_service_section_after_hed
+      background: url("../img/svg/image_smm.svg")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+
+    .template_service_section_case
+      .template_service_wrapper-case
+        .left_case,
+        .right_case
+          .case:last-child
+            margin-bottom: 0
