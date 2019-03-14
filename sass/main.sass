@@ -65,6 +65,7 @@ body
   display: flex
   background: $coloBlack
   color: $coloWhite
+  //overflow-x: hidden
 
 
 header,
@@ -901,8 +902,8 @@ section.front_description
           transform: rotate(-135deg)
 
 
-section.front_footer
-  .front_footer_request
+section.request_section
+  .request_section_wrapper
     height: 70vh
     #frontFooterRequest
       display: flex
@@ -961,6 +962,29 @@ section.front_footer
             transform: rotate(90deg)
             font-size: 120px
             font-weight: 100
+
+
+section.contact
+  border: 1px dotted red
+  width: 100vw
+  height: 94vh
+  display: flex
+  align-items: center
+  .contact_wrapper
+
+    width: 100%
+    max-width: 62vw
+    margin-left: 22vw
+    margin-right: 16vw
+
+    border: 1px dotted $colorGreen
+
+    .title
+      font-style: normal
+      font-weight: bold
+      font-size: 78px
+      line-height: normal
+      color: $coloWhite
 
 
 .menu_pop
@@ -1045,8 +1069,6 @@ section.front_footer
   .footer-wrapper
     width: 100%
     height: calc( 100% - 100px )
-    //max-width: 750px
-    //max-width: 70vw
     margin: 0 auto
     display: flex
     justify-content: space-around
@@ -1129,7 +1151,8 @@ section.front_footer
     bottom: -2px
 
 
-//TODO template_service
+
+// template_service
 body.template_service
   background: $colorBgLiteGray
   color: $coloBlack
@@ -1449,9 +1472,16 @@ body.template_service
               &:before
                 transition: all .35s linear
                 opacity: .9
+    .template_service_section_banner
+      width: 100vw
+      height: 70vh
+      background: url("../img/svg/image_banner_mc.svg")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
 
 
-//TODO template_web
+// template_service + template_web
 body.template_service.template_web
   #main
     .template_service_section_hed
@@ -1481,7 +1511,7 @@ body.template_service.template_web
       background-position: center center
 
 
-//TODO template_ppc
+// template_service + template_ppc
 body.template_service.template_ppc
   header
     background: transparent
@@ -1515,7 +1545,7 @@ body.template_service.template_ppc
       background-position: center center
 
 
-//TODO template_cim
+// template_service + template_cim
 body.template_service.template_cim
   header
     background: transparent
@@ -1548,8 +1578,7 @@ body.template_service.template_cim
       background-position: center center
 
 
-
-//TODO template_seo
+// template_service + template_seo
 body.template_service.template_seo
   header
     background: transparent
@@ -1590,7 +1619,7 @@ body.template_service.template_seo
             margin-bottom: 0
 
 
-//TODO template_smm
+// template_service + template_smm
 body.template_service.template_smm
   header
     background: transparent
@@ -1630,3 +1659,25 @@ body.template_service.template_smm
         .right_case
           .case:last-child
             margin-bottom: 0
+
+
+// template_service + template_mc
+body.template_service.template_mc
+  #main
+    .template_service_section_after_hed
+      background: url("../img/svg/image_mc.svg")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+
+    .template_service_section_case
+      .template_service_wrapper-case
+        .head_case
+          .head_case-img
+            margin-bottom: 16vh
+
+    .template_service_section_pre-footer
+      background: inherit
+      margin: 0
+      padding: 0
+      height: 70vh
