@@ -1,3 +1,55 @@
+function initMap() {
+    var map = new google.maps.Map(
+        document.getElementById('map'), {
+            mapTypeControl: false,
+            zoom: 16,
+            center: {lat: 50.402, lng: 30.63},
+            styles: [{
+                "featureType": "administrative",
+                "elementType": "labels.text.fill",
+                "stylers": [{"color": "#444444"}]
+            }, {
+                "featureType": "landscape",
+                "elementType": "all",
+                "stylers": [{"color": "#262626"}]
+            }, {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [{"visibility": "off"}]
+            }, {
+                "featureType": "road",
+                "elementType": "all",
+                "stylers": [{"color": "#000000"}, {"saturation": -100}, {"lightness": 45}]
+            }, {
+                "featureType": "road.highway",
+                "elementType": "all",
+                "stylers": [{"color": "#444444"}, {"visibility": "simplified"}]
+            }, {
+                "featureType": "road.arterial",
+                "elementType": "labels.icon",
+                "stylers": [{"color": "#444444"}, {"visibility": "on"}]
+            }, {
+                "featureType": "transit",
+                "elementType": "all",
+                "stylers": [{"visibility": "off"}]
+            }, {
+                "featureType": "water",
+                "elementType": "all",
+                "stylers": [{"color": "#000000"}, {"visibility": "on"}]
+            },
+            ]
+        });
+    var marker = new google.maps.Marker({
+        position: {lat: 50.40341, lng: 30.6304689}, map: map,
+        title: 'web-intellectus.com',
+        icon: {
+            url: "../img/map-logo.png",
+            scaledSize: new google.maps.Size(160, 37)
+        }
+    });
+}
+
+
 $(document).ready(function ($) {
 
     const minh = $(window).height() / 2;
@@ -38,7 +90,7 @@ window.onload = function () {
 
     function getId(y) {
         let geid = document.getElementById(y);
-        if(geid !== null){
+        if (geid !== null) {
             return geid;
         } else if (geid == null) {
             // return this;
