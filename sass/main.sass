@@ -1188,6 +1188,15 @@ body.template_service
       margin-left: 22vw
       margin-right: 16vw
 
+
+    .template_service_wrapper-case
+      width: 100%
+      max-width: 74vw
+      margin-left: 22vw
+      margin-right: 4vw
+      border: 1px dotted green
+
+
     .template_service_section_hed
       width: 100%
       height: calc(100vh - 84px - 42px)
@@ -1215,13 +1224,63 @@ body.template_service
             font-size: 20px
             letter-spacing: 0.03em
 
+
     .template_service_section_after_hed
       width: 100%
       height: 50vh
 
+
     .template_service_section_hed_description
       width: 100%
-      height: 50vh
+      min-height: 50vh
+      position: relative
+      display: flex
+      align-items: center
+      padding: 20px 0
+      .template_service_wrapper
+        font-style: normal
+        font-weight: 600
+        line-height: 25px
+        font-size: 16px
+        letter-spacing: 0.03em
+        color: $colorBg
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        h5
+          width: 100%
+          margin-bottom: 20px
+        p
+          font-weight: 300
+          width: 49%
+
+
+    .template_service_section_main-text
+      width: 100%
+      height: calc(100vh - 84px)
+      display: flex
+      align-items: center
+      .main-text
+        font-style: normal
+        font-weight: 500
+        font-size: 35px
+        line-height: 51px
+        color: $colorBg
+
+
+    .template_service_section_case
+      .template_service_wrapper-case
+        display: flex
+        justify-content: space-between
+        .left_case
+          border: 1px solid red
+          width: 100%
+          max-width: 27vw
+        .right_case
+          border: 1px solid navy
+          width: 100%
+          max-width: 33vw
+
 
 
     .template_service_section_footer
@@ -1238,6 +1297,9 @@ body.template_service
           height: 100%
           a
             display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
             width: 100%
             height: 100%
             text-decoration: none
@@ -1250,6 +1312,27 @@ body.template_service
             span
               color: $coloWhite
               z-index: 9
+              max-width: 318px
+              min-width: 318px
+              height: auto
+            .footer_list_breadcrumbs
+              font-style: normal
+              font-weight: 600
+              line-height: 16px
+              font-size: 10px
+              letter-spacing: 0.1em
+              text-transform: uppercase
+              margin-bottom: 6px
+
+            .footer_list_title
+              font-style: normal
+              font-weight: 500
+              line-height: 51px
+              font-size: 35px
+              min-height: 110px
+
+
+            transition: all .35s linear
             &:before
               content: ''
               width: 100%
@@ -1257,13 +1340,12 @@ body.template_service
               position: absolute
               background: $coloBlack
               opacity: 1
-              transition: opacity .15s linear
+              transition: all .35s linear
             &:hover
+              transition: all .35s linear
               &:before
-                transition: opacity .15s linear
+                transition: all .35s linear
                 opacity: .9
-
-
 
 
 
@@ -1273,7 +1355,8 @@ body.template_service
 //TODO template_web
 body.template_service.template_web
   #main
-    .template_service_section_hed
+    .template_service_section_hed,
+    .template_service_section_main-text
       background: $colorRed
 
 

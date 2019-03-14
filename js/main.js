@@ -1,8 +1,6 @@
-'use strict';
-
 $(document).ready(function ($) {
 
-    var minh = $(window).height() / 2;
+    const minh = $(window).height() / 2;
 
     $('.description_text').readmore({
         speed: 1000,
@@ -39,7 +37,12 @@ window.onload = function () {
     }
 
     function getId(y) {
-        return document.getElementById(y);
+        let geid = document.getElementById(y);
+        if(geid !== null){
+            return geid;
+        } else if (geid == null) {
+            // return this;
+        }
     }
 
     getId("btn").onclick = function () {
@@ -64,11 +67,11 @@ window.onload = function () {
     // scroll
     window.onscroll = function () {
 
-        var y = document.getElementById('scrollRegion').getBoundingClientRect().top - 84;
+        let y = document.getElementById('scrollRegion').getBoundingClientRect().top - 84;
 
-        var f = document.getElementById("scrollRegionFooter").getBoundingClientRect().top - 84;
+        let f = document.getElementById("scrollRegionFooter").getBoundingClientRect().top - 84;
 
-        var h = document.getElementsByTagName("header")[0];
+        let h = document.getElementsByTagName("header")[0];
 
         if (y < 0 && f > 0) {
             h.classList.add("header_white");
@@ -82,3 +85,4 @@ window.onload = function () {
 
 };
 
+console.log("check-in");
