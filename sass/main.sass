@@ -1798,7 +1798,6 @@ body.template_blog
             font-size: 20px
             letter-spacing: 0.03em
 
-
     .template_blog_section_body
       padding-bottom: 20vh
       .template_blog_wrapper
@@ -1836,6 +1835,161 @@ body.template_blog
               font-size: 18px
               line-height: 26px
               color: $coloBlack
+    .template_blog_section_banner
+      width: 100%
+      height: 50vh
+      background: url("../img/blog_banner_bg.png")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+
+    .template_blog_section_hed_description
+      width: 100%
+      min-height: 50vh
+      position: relative
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      padding: 20px 0
+      .template_blog_wrapper
+        width: 100%
+        max-width: 62vw
+        margin-left: 22vw
+        margin-right: 16vw
+        font-style: normal
+        font-weight: 600
+        line-height: 25px
+        font-size: 16px
+        letter-spacing: 0.03em
+        color: $colorBg
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        h5
+          width: 100%
+          margin-bottom: 20px
+          margin-top: 107px
+        p
+          font-weight: 300
+          width: 49%
+
+        .blog_section_slogan
+          font-style: normal
+          font-weight: normal
+          font-size: 20px
+          line-height: 34px
+          letter-spacing: 0.03em
+          color: $coloBlack
+          margin: 100px 0 113px 0
+
+        .blog_section_content_banner
+          width: 100%
+          img
+            width: 100%
+            height: auto
+            margin-bottom: 31px
+
+          p
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 22px
+            letter-spacing: 0.03em
+
+          .blog_section_content_banner_footer
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin: 80px 0 100px 0
+            .data
+              font-style: normal
+              font-weight: normal
+              font-size: 12px
+              line-height: 20px
+              letter-spacing: 0.04em
+
+            a
+              font-style: normal
+              font-weight: bold
+              font-size: 14px
+              line-height: 20px
+              color: $coloBlack
+
+    .template_blog_section_footer
+      width: 100%
+      height: 50vh
+      background: $coloBlack
+      .section_footer_list
+        display: flex
+        height: 100%
+        li
+          display: flex
+          width: 50%
+          height: 100%
+          a
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            width: 100%
+            height: 100%
+            text-decoration: none
+            color: $coloWhite
+            background: url("../img/svg/image_68.svg")
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center center
+            position: relative
+            span
+              color: $coloWhite
+              z-index: 9
+              max-width: 318px
+              min-width: 318px
+              height: auto
+            .footer_list_breadcrumbs
+              font-style: normal
+              font-weight: 600
+              line-height: 16px
+              font-size: 10px
+              letter-spacing: 0.1em
+              text-transform: uppercase
+              margin-bottom: 6px
+
+            .footer_list_title
+              font-style: normal
+              font-weight: 500
+              line-height: 51px
+              font-size: 35px
+              min-height: 110px
+
+
+            transition: all .35s linear
+            &:before
+              content: ''
+              width: 100%
+              height: 100%
+              position: absolute
+              background: $coloBlack
+              opacity: 1
+              transition: all .35s linear
+            &:hover
+              transition: all .35s linear
+              &:before
+                transition: all .35s linear
+                opacity: .9
+
+
+// template_blog + blog_details
+body.template_blog.blog_details
+  #main
+    .template_blog_section_hed
+      &:after
+        display: none
+
+
+
+
+
 
 
 
