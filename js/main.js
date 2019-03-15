@@ -50,7 +50,7 @@ function initMap() {
 }
 
 
-$(document).ready(function ($) {
+jQuery(document).ready(function ($) {
 
     const minh = $(window).height() / 2;
 
